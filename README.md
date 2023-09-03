@@ -10,6 +10,7 @@ Spring的简易实现
 - 三级缓存解决单例Bean的循环依赖问题，`singletonObjects`存放成品、`earlySingletonObjects`存放半成品、`singletonFactories`存放早期工厂.
 
 ## AOP
+- 只支持`@Before`和`@AfterReturning`两种通知.
 - 切点的简单匹配，只支持`@annotation`注解的形式.
 - `@Aspect`标记的高级Advisor向低级Advisor的转变, 利用`AdvisorFactory`实现, 只支持高级`Advisor`.
 - `AnnotationAwareAspectJAutoProxyCreator`后置处理器进行代理的创建, `findCandidateAdvisors()`寻找容器中的所有`Advisor`, 只查找一次然后缓存起来; `findEligibleAdvisors()`查找当前类匹配的`Advisor`; `wrapIfNecessary()`如果有匹配的`Advisor`则创建动态代理, 否则不创建.
