@@ -19,3 +19,7 @@ Spring的简易实现
 - 通过JDK创建动态代理, 未实现cglib动态代理.
 - 循环依赖时通过`getEarlyBeanReference()`提前创建代理, 避免引用到原对象.
 
+# 测试
+- IOC及AOP测试：`test/Test.java`
+- 循环依赖测试：`test/circularDependencyTest/Test.java`
+
